@@ -76,6 +76,9 @@ if(curr_game_state == GAME_STATE.PLAYING)
 		draw_set_valign(fa_top);
 	}
 	
+	
+	draw_text((room_width/4)*3, 16, string(curr_wave));
+	
 	// Hides the cursor
 	window_set_cursor(cr_none);
 	

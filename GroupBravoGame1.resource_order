@@ -10,5 +10,7 @@
   ],
   "ResourceOrderSettings": [
     {"name":"Sprite59","order":8,"path":"sprites/Sprite59/Sprite59.yy",},
+    {"name":"seq_upgrademenu","order":1,"path":"sequences/seq_upgrademenu/seq_upgrademenu.yy",},
+    {"name":"rm_main_menu","order":1,"path":"rooms/rm_main_menu/rm_main_menu.yy",},
   ],
 }
