@@ -8,5 +8,7 @@
     {"name":"Animation Curves","order":6,"path":"folders/Animation Curves.yy",},
     {"name":"Extensions","order":7,"path":"folders/Extensions.yy",},
   ],
-  "ResourceOrderSettings": [],
+  "ResourceOrderSettings": [
+    {"name":"Sprite59","order":8,"path":"sprites/Sprite59/Sprite59.yy",},
+  ],
 }

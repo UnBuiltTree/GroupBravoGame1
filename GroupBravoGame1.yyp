@@ -71,6 +71,7 @@
     {"id":{"name":"ps_shoot_empty","path":"particles/ps_shoot_empty/ps_shoot_empty.yy",},},
     {"id":{"name":"spr_hud_health_end","path":"sprites/spr_hud_health_end/spr_hud_health_end.yy",},},
     {"id":{"name":"spr_obstacle_3","path":"sprites/spr_obstacle_3/spr_obstacle_3.yy",},},
+    {"id":{"name":"Sprite59","path":"sprites/Sprite59/Sprite59.yy",},},
     {"id":{"name":"spr_button_close","path":"sprites/spr_button_close/spr_button_close.yy",},},
     {"id":{"name":"seq_win","path":"sequences/seq_win/seq_win.yy",},},
     {"id":{"name":"seq_pause","path":"sequences/seq_pause/seq_pause.yy",},},
