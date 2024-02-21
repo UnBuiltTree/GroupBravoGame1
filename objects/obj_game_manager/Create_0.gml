@@ -15,12 +15,12 @@ curr_game_state = GAME_STATE.PLAYING;
 // Variable for storing the current wave - initally set to 0
 curr_wave = 0;
 // Variable for storing the maximum waves a player can go through
-max_levels = 10;
+max_levels = 3;
 
 // Variables for setting the grid size of the level
 // can be changed to larger or smaller sizes for bigger or smaller levels
-arena_grid_width = 8;
-arena_grid_height = 8;
+arena_grid_width = 4;
+arena_grid_height = 4;
 
 // Variables for cell sizes (background grid pieces)
 cell_width = 512;
