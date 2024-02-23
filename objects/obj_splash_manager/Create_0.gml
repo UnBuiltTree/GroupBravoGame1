@@ -1,3 +1,8 @@
+floor_number = 0;
+
+global.floor_number = floor_number;
+
+show_debug_message("Floor Number: " + string(global.floor_number));
 // Creates the splash screen squence
 layer_sequence_create("Instances", room_width / 2, room_height / 2, seq_splash);
 

@@ -1,8 +1,10 @@
 // States used for storing the game playing state
+// added INTERIM game state ~Weston
 enum GAME_STATE
 {
 	PLAYING,
 	PAUSED,
+	INTERIM,
 	ENDED,
 	SIZE
 }
@@ -10,58 +12,92 @@ enum GAME_STATE
 // Sets a random seed for the project
 randomise();
 
-// Variable for the current game state - initally set to playing
-curr_game_state = GAME_STATE.PLAYING;
-// Variable for storing the current wave - initally set to 0
-curr_wave = 0;
-// Variable for storing the maximum waves a player can go through
-max_levels = 3;
+/*This switch uses floor_number to build the level according to the varables stored in each case,
+  floors are -1 than their real numbers, so 'floor 3' is 'case 2' ~Weston*/
+  
+switch (global.floor_number) {
+    case 0:
+	    // Variable for storing the maximum waves a player can go through
+		max_levels= 3;
+		
+		// Variables for setting the grid size of the level
+		// can be changed to larger or smaller sizes for bigger or smaller levels
+		arena_grid_width= 4;
+		arena_grid_height= 3;
+		
+		// Variables for setting up the rate gaps appear in the walls (enemy spawn points)
+		// Rate is how offten a side peice will become a gap
+		gap_rate= 1/3;
+		// Count is how many gaps are created
+		gap_count= 0;
+		// Min is the minimum amount of gaps a level can have or it will regenerate
+		gap_min= 2;
+		// Max is the maximum amount of gaps a level can have before it stops making more
+		gap_max= 8;
+	
+		max_enemies = 40;
+        break;
+	case 1:
+		max_levels= 3;
+		
+		arena_grid_width= 6;
+		arena_grid_height= 6;
+		
+		gap_rate= 1/3;
+		gap_count= 0;
+		gap_min= 2;
+		gap_max= 8;
+	
+		max_enemies = 40;
+        break;
+    default:
+        break;
+}
 
-// Variables for setting the grid size of the level
-// can be changed to larger or smaller sizes for bigger or smaller levels
-arena_grid_width = 4;
-arena_grid_height = 4;
+/*level_initialize fuction, basically move everything that for building the arena into this fuction
+  to make it more understandable with the new floor number switch ~Weston*/
+level_initialize = function()
+{
+	// Variable for the current game state - initally set to playing
+	curr_game_state = GAME_STATE.PLAYING;
+	// Variable for storing the current wave - initally set to 0
+	curr_wave = 0;
 
-// Variables for cell sizes (background grid pieces)
-cell_width = 512;
-cell_height = 512;
+	// Variables for cell sizes (background grid pieces)
+	cell_width = 512;
+	cell_height = 512;
 
-// Variables for setting up the pathfiding grid
-// The higher the rate the more precise the pathfinding but more resource demanding
-grid_rate = 8;
-grid = mp_grid_create(0, 0, arena_grid_width * grid_rate, arena_grid_height * grid_rate, cell_width / grid_rate, cell_height / grid_rate);
+	// Variables for setting up the pathfiding grid
+	// The higher the rate the more precise the pathfinding but more resource demanding
+	grid_rate = 8;
+	grid = mp_grid_create(0, 0, arena_grid_width * grid_rate, arena_grid_height * grid_rate, cell_width / grid_rate, cell_height / grid_rate);
 
-// Variables for setting up the rate gaps appear in the walls (enemy spawn points)
-// Rate is how offten a side peice will become a gap
-gap_rate = 1/3;
-// Count is how many gaps are created
-gap_count = 0;
-// Min is the minimum amount of gaps a level can have or it will regenerate
-gap_min = 2;
-// Max is the maximum amount of gaps a level can have before it stops making more
-gap_max = 8;
+	// Variables used for the score font used in the hud
+	score_font = fnt_luckiest_guy_48;
+	score_colour = c_white;
+	score_alpha = 0.75;
+	score_halign = fa_center;
+	score_valign = fa_middle;
 
-// Variables used for the score font used in the hud
-score_font = fnt_luckiest_guy_48;
-score_colour = c_white;
-score_alpha = 0.75;
-score_halign = fa_center;
-score_valign = fa_middle;
+	// Variables used to check the last states of paused and new waves so they arnt acceidentally called twice
+	was_paused = false;
+	was_new_wave = false;
 
-// Variables used to check the last states of paused and new waves so they arnt acceidentally called twice
-was_paused = false;
-was_new_wave = false;
+	// Variable used to change how long the inital wave will take to start after the game begins
+	start_time = 3.0;
 
-// Variable used to change how long the inital wave will take to start after the game begins
-start_time = 3.0;
-// Variable used to set the maximum amount of enemeies that can appear on screen at any time
-max_enemies = 40;
+	// Creates pause button used in the top left corner of the screen
+	instance_create_layer(0, 0, "Popups", obj_button_pause);
 
-// Creates pause button used in the top left corner of the screen
-instance_create_layer(0, 0, "Popups", obj_button_pause);
+	// Creates the reload HUD popup
+	instance_create_layer(0, 0, "Popups", obj_reload_hud_element);
+}
 
-// Creates the reload HUD popup
-instance_create_layer(0, 0, "Popups", obj_reload_hud_element);
+/*Might be an good idea to do something simular if we make player upgrades, as i mean a switch
+  and player_initialize fuction ~Weston*/
+
+// Calls the level initialize fuction above ~Weston
+level_initialize()
 
 // Checks if game has touch controls
 if (global.is_touch)
@@ -528,6 +564,22 @@ wave_new_spawners = function()
 			_curr_spawner++;
 		}
 	}
+}
+
+// Function for when the player goes to the interim menu ~Weston
+interim_menu = function()
+{
+	// Sets the current game state to ended ~Weston
+	curr_game_state = GAME_STATE.INTERIM;
+	
+	// Stops the current game music
+	audio_stop_sound(music);
+	// Resets music
+	music = -1;
+	/*Sends the game to the interim_menu room, if you wish to make a simular menu
+	  make sure to put the menu's manager object inside the room before spending
+	  time trying to figure out the non-existent issue with your code ~Weston*/
+	room_goto(rm_interim_menu)
 }
 
 // Function called for when the player loses the game
