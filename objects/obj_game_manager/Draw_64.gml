@@ -60,11 +60,13 @@ if(curr_game_state == GAME_STATE.PLAYING)
 		}
 		
 		// Sets the draw options for the scores text
+		/*
 		draw_set_font(obj_game_manager.score_font);
 		draw_set_color(obj_game_manager.score_colour);
 		draw_set_alpha(obj_game_manager.score_alpha);
 		draw_set_halign(obj_game_manager.score_halign);
 		draw_set_valign(obj_game_manager.score_valign);
+		*/
 		
 		// Draws the text
 		draw_text(room_width / 2, 64, string(player_score));

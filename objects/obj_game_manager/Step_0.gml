@@ -32,15 +32,21 @@ if(curr_game_state == GAME_STATE.PLAYING)
 				{
 					// Increments the current wave 
 					curr_wave++;
+					//show_debug_message("Current wave, if (_is_queue_empty) " + string(curr_wave));
 					// Runs the wave cleared fucction spawning the wave clear banner
 					wave_cleared();
 					// Sets the check for new wave to false
 					was_new_wave = false;
+					
 				}
 				else
 				{
-					// Calls win game function that shows the template complete banner
-					win_game();
+					// Runs the wave cleared fuction spawning the wave clear banner
+					wave_cleared();
+					//show_debug_message("Floor Number, if (_is_queue_empty) else: " + string(global.floor_number));
+					/*this alarm just calls the interim menu function that goes
+					to the interim menu when all waves are cleared ~Weston*/
+					alarm[0] = 50
 				}
 			}
 		}
@@ -58,6 +64,7 @@ if(curr_game_state == GAME_STATE.PLAYING)
 		{
 			// Increments the current wave
 			curr_wave++;
+			//show_debug_message("Current wave, if (start_time <= 0) " + string(curr_wave));
 			// Runs the wave incoming function
 			wave_incoming();
 		}

@@ -1,3 +1,5 @@
+
+global.floor_number = 0;
 // Creates the splash screen squence
 layer_sequence_create("Instances", room_width / 2, room_height / 2, seq_splash);
 
@@ -5,7 +7,7 @@ layer_sequence_create("Instances", room_width / 2, room_height / 2, seq_splash);
 is_highscore_table = false;
 highscores_alpha = 0.0;
 highscores_alpha_target = 0.0;
-
+show_debug_message("Floor Number splash menu: " + string(global.floor_number));
 // Array used for storing the high scores within
 highscores = [];
 
