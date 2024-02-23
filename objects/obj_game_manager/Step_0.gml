@@ -32,14 +32,9 @@ if(curr_game_state == GAME_STATE.PLAYING)
 				{
 					// Increments the current wave 
 					curr_wave++;
+					show_debug_message("Current wave, if (_is_queue_empty) " + string(curr_wave));
 					// Runs the wave cleared fucction spawning the wave clear banner
-					/* added an if statement to try to get the wave cleared banner to-
-					   not show up on the clearing of the last wave in a floor. (Doesnt work,
-					   banner still shows up, pls help fix) ~Weston*/
-					if (curr_wave != max_levels-1)
-					{
-						wave_cleared();
-					}
+					wave_cleared();
 					// Sets the check for new wave to false
 					was_new_wave = false;
 					
@@ -48,10 +43,10 @@ if(curr_game_state == GAME_STATE.PLAYING)
 				{
 					// Runs the wave cleared fuction spawning the wave clear banner
 					wave_cleared();
-					show_debug_message("Floor Number: " + string(global.floor_number));
+					show_debug_message("Floor Number, if (_is_queue_empty) else: " + string(global.floor_number));
 					/*this alarm just calls the interim menu function that goes
 					to the interim menu when all waves are cleared ~Weston*/
-					alarm[0] = 300
+					alarm[0] = 100
 				}
 			}
 		}
@@ -69,6 +64,7 @@ if(curr_game_state == GAME_STATE.PLAYING)
 		{
 			// Increments the current wave
 			curr_wave++;
+			show_debug_message("Current wave, if (start_time <= 0) " + string(curr_wave));
 			// Runs the wave incoming function
 			wave_incoming();
 		}

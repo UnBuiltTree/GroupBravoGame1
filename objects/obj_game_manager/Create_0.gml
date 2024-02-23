@@ -40,7 +40,20 @@ switch (global.floor_number) {
 	case 1:
 		max_levels= 3;
 		
-		arena_grid_width= 6;
+		arena_grid_width= 4;
+		arena_grid_height= 4;
+		
+		gap_rate= 1/3;
+		gap_count= 0;
+		gap_min= 2;
+		gap_max= 8;
+	
+		max_enemies = 40;
+        break;
+	case 2:
+		max_levels= 3;
+		
+		arena_grid_width= 8;
 		arena_grid_height= 6;
 		
 		gap_rate= 1/3;
@@ -51,9 +64,22 @@ switch (global.floor_number) {
 		max_enemies = 40;
         break;
     default:
+		max_levels= 3;
+		
+		arena_grid_width= 6;
+		arena_grid_height= 6;
+		
+		gap_rate= 1/3;
+		gap_count= 0;
+		gap_min= 2;
+		gap_max= 8;
+	
+		max_enemies = 40;
         break;
 }
 
+
+curr_wave = 0;
 /*level_initialize fuction, basically move everything that for building the arena into this fuction
   to make it more understandable with the new floor number switch ~Weston*/
 level_initialize = function()
@@ -61,7 +87,6 @@ level_initialize = function()
 	// Variable for the current game state - initally set to playing
 	curr_game_state = GAME_STATE.PLAYING;
 	// Variable for storing the current wave - initally set to 0
-	curr_wave = 0;
 
 	// Variables for cell sizes (background grid pieces)
 	cell_width = 512;
@@ -93,6 +118,7 @@ level_initialize = function()
 	instance_create_layer(0, 0, "Popups", obj_reload_hud_element);
 }
 
+show_debug_message("Current wave, level_initialize: " + string(curr_wave));
 /*Might be an good idea to do something simular if we make player upgrades, as i mean a switch
   and player_initialize fuction ~Weston*/
 
@@ -570,16 +596,16 @@ wave_new_spawners = function()
 interim_menu = function()
 {
 	// Sets the current game state to ended ~Weston
+	show_debug_message("Floor Number, interim menu func: " + string(global.floor_number));
 	curr_game_state = GAME_STATE.INTERIM;
-	
+	room_goto(rm_interim_menu);
+	global.floor_number = global.floor_number + 1;
+	show_debug_message("Floor Number, interim menu func: " + string(global.floor_number));
+	show_debug_message("room_goto(rm_interim_menu) interim menu func");
 	// Stops the current game music
 	audio_stop_sound(music);
 	// Resets music
 	music = -1;
-	/*Sends the game to the interim_menu room, if you wish to make a simular menu
-	  make sure to put the menu's manager object inside the room before spending
-	  time trying to figure out the non-existent issue with your code ~Weston*/
-	room_goto(rm_interim_menu)
 }
 
 // Function called for when the player loses the game

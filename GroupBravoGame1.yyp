@@ -184,8 +184,8 @@
   ],
   "RoomOrderNodes": [
     {"roomId":{"name":"rm_main_menu","path":"rooms/rm_main_menu/rm_main_menu.yy",},},
-    {"roomId":{"name":"rm_arena","path":"rooms/rm_arena/rm_arena.yy",},},
     {"roomId":{"name":"rm_interim_menu","path":"rooms/rm_interim_menu/rm_interim_menu.yy",},},
+    {"roomId":{"name":"rm_arena","path":"rooms/rm_arena/rm_arena.yy",},},
   ],
   "templateType": "game",
   "TextureGroups": [
