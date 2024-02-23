@@ -1,7 +1,7 @@
 /*This is the manager i created for the interim menu that
   shows up after clearing a floor ~Weston*/
-// increases floor_number for the player to advance to the next floor
-show_debug_message("Floor Number, iterim manager: " + string(global.floor_number));
+  
+//show_debug_message("Floor Number, iterim manager: " + string(global.floor_number));
 
 // Creates the splash screen squence
 layer_sequence_create("Instances", room_width / 2, room_height / 2, seq_interim_menu);

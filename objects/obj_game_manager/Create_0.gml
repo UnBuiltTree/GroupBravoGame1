@@ -593,15 +593,20 @@ wave_new_spawners = function()
 }
 
 // Function for when the player goes to the interim menu ~Weston
+
 interim_menu = function()
 {
+	/*If you create a menu like this one make sure the manager object and make sure
+	 that the manager object and room are not peristant before looking for a non-existant
+	 issue with your code! (2 hours wasted) ~Weston*/
+	
 	// Sets the current game state to ended ~Weston
-	show_debug_message("Floor Number, interim menu func: " + string(global.floor_number));
+	//show_debug_message("Floor Number, interim menu func: " + string(global.floor_number));
 	curr_game_state = GAME_STATE.INTERIM;
 	room_goto(rm_interim_menu);
 	global.floor_number = global.floor_number + 1;
-	show_debug_message("Floor Number, interim menu func: " + string(global.floor_number));
-	show_debug_message("room_goto(rm_interim_menu) interim menu func");
+	//show_debug_message("Floor Number, interim menu func: " + string(global.floor_number));
+	//show_debug_message("room_goto(rm_interim_menu) interim menu func");
 	// Stops the current game music
 	audio_stop_sound(music);
 	// Resets music
