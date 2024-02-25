@@ -3,20 +3,20 @@ turret_lvl = global.player_gun_type
 
 switch (global.player_gun_type) {
 	//the case her means the next turret_type name so everything is one behind
-	case 0:
-		turret_type = "Twin-Turret"
-	break;
 	case 1:
-		turret_type = "Triple-Threat"
+		turret_type = "Default-Gun"
 	break;
 	case 2:
-		turret_type = "Quad-Barrel"
+		turret_type = "Twin-Turret"
 	break;
 	case 3:
-		turret_type = "Auto-Cannon"
+		turret_type = "Triple-Threat"
+	break;
+	case 4:
+		turret_type = "Quad-Barrel"
 	break;
 	default:
-	turret_type = "Upgrade-Gun"
+	turret_type = "downgrade-Gun"
 	break;
 }
 
