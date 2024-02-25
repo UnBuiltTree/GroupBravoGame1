@@ -249,7 +249,7 @@ trigger_pressed = function()
 			if (global.player_gun_type == 4){
 				switch (_burstfire_num) {
 				    case 6:
-				        player_fire_cooldown = 0.5;
+				        player_fire_cooldown = player_fire_rate*5;
 						_burstfire_num = 0;
 				        break;
 				    default:
