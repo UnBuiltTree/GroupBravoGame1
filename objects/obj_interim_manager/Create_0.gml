@@ -45,6 +45,12 @@ layer_destroy_instances("Buttons")
 
 refresh_buttons = function(){
 	destoy_buttons()
+	
+	if (global.player_gun_type > global.player_gun_type_max){
+	global.player_gun_type_max = global.player_gun_type
+	}
+	
+	
 	create_buttons()
 }
 
