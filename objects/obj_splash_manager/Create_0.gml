@@ -1,5 +1,6 @@
 
 global.floor_number = 0;
+global.player_gun_type = 0;
 // Creates the splash screen squence
 layer_sequence_create("Instances", room_width / 2, room_height / 2, seq_splash);
 

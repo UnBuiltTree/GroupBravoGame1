@@ -40,7 +40,7 @@ switch (global.floor_number) {
 	case 1:
 		max_levels= 3;
 		
-		arena_grid_width= 4;
+		arena_grid_width= 6;
 		arena_grid_height= 4;
 		
 		gap_rate= 1/3;
@@ -64,15 +64,15 @@ switch (global.floor_number) {
 		max_enemies = 40;
         break;
     default:
-		max_levels= 3;
+		max_levels= global.floor_number;
 		
-		arena_grid_width= 6;
+		arena_grid_width= 8;
 		arena_grid_height= 6;
 		
-		gap_rate= 1/3;
+		gap_rate= 1/4;
 		gap_count= 0;
-		gap_min= 2;
-		gap_max= 8;
+		gap_min= 4;
+		gap_max= 10;
 	
 		max_enemies = 40;
         break;
