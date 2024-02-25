@@ -1,7 +1,7 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_install_btn",
+  "name": "obj_upgrd_btn_firerate",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
@@ -33,8 +33,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_blue_button",
-    "path": "sprites/spr_blue_button/spr_blue_button.yy",
+    "name": "spr_blue_button_lockable",
+    "path": "sprites/spr_blue_button_lockable/spr_blue_button_lockable.yy",
   },
   "spriteMaskId": null,
   "visible": true,

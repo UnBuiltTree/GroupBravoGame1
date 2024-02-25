@@ -1,3 +1,5 @@
+draw_text((room_width/2), 64, "Coins: " + string(global.player_coins));
+
 //commi8ted out code from duplicating from splash manager
 /*
 // Checks if highscore table should show

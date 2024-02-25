@@ -5,22 +5,31 @@ switch (global.player_gun_type) {
 	//the case her means the next turret_type name so everything is one behind
 	case 0:
 		turret_type = "Twin-Turret"
+		_cost = 10;
 	break;
 	case 1:
 		turret_type = "Triple-Threat"
+		_cost = 15;
 	break;
 	case 2:
 		turret_type = "Quad-Barrel"
+		_cost = 25;
 	break;
 	case 3:
 		turret_type = "Auto-Cannon"
+		_cost = 40;
 	break;
 	default:
-	turret_type = "Upgrade-Gun"
+		turret_type = "Upgrade-Gun"
+		_cost = 10;
 	break;
 }
+if (global.player_gun_type == global.player_gun_type_max){
+	text = string(turret_type) + " [" + string(_cost) + "]";
+} else {
+	text = string(turret_type);
+}
 
-text = string(turret_type);
 font = fnt_agency_fb_24;
 colour = c_black;
 halign = fa_center;
@@ -36,7 +45,11 @@ can_scale_at_rate = false;
 // Variable for pressed state
 is_pressed = false;
 
-is_locked = false;
+if (global.player_coins < _cost && global.player_gun_type_max == global.player_gun_type){
+	is_locked = true;
+} else {
+	is_locked = false;
+}
 
 // Variable for retry button sound
 sound_button = -1;

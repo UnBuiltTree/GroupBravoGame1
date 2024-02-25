@@ -1,5 +1,5 @@
 // Variables for the retry button text
-text = "RETRY";
+text = "RETRY"
 font = fnt_agency_fb_24;
 colour = c_black;
 halign = fa_center;

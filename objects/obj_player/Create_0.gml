@@ -32,7 +32,7 @@ switch (global.player_gun_type) {
 }
 
 //upgrd_fire_rate = global.player_upgrd_fire_rate;
-upgrd_fire_rate = 1;
+upgrd_fire_rate = 1 + (global.player_firerate_upgrd/2);
 
 player_initialize = function()
 {
@@ -49,8 +49,12 @@ player_curr_ammo = 31;
 player_max_ammo = 31;
 // Variable for player fire rate
 player_fire_rate = gun_fire_rate / upgrd_fire_rate;
+
 // Variable for firing cooldown
 player_fire_cooldown = 0;
+
+_burstfire_num = 0;
+
 // Variable for reload rate
 player_reload_rate = 0.075;
 // Variable for reload cooldown
@@ -241,8 +245,22 @@ trigger_pressed = function()
 		// Checks if the fire cooldown has finished
 		if (player_fire_cooldown <= 0)
 		{
-			// Resets the fire cooldown
-			player_fire_cooldown = player_fire_rate;
+			// Resets the fire cooldown, uses special burt mode for auto cannon
+			if (global.player_gun_type == 4){
+				switch (_burstfire_num) {
+				    case 6:
+				        player_fire_cooldown = 0.5;
+						_burstfire_num = 0;
+				        break;
+				    default:
+				        player_fire_cooldown = player_fire_rate;
+						_burstfire_num++;
+				        break;
+				}
+			}
+			else {
+				player_fire_cooldown = player_fire_rate;
+			}
 			// Reduces the ammo
 			player_curr_ammo--;
 			// Creates a projectile

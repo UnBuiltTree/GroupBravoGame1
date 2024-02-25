@@ -78,7 +78,6 @@ switch (global.floor_number) {
         break;
 }
 
-
 curr_wave = 0;
 /*level_initialize fuction, basically move everything that for building the arena into this fuction
   to make it more understandable with the new floor number switch ~Weston*/

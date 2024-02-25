@@ -69,7 +69,7 @@ if(curr_game_state == GAME_STATE.PLAYING)
 		*/
 		
 		// Draws the text
-		draw_text(room_width / 2, 64, string(player_score));
+		draw_text(room_width / 2, 64, string(global.player_score));
 		
 		// Returns the draw options to defaults
 		draw_set_color(c_white);
@@ -80,6 +80,7 @@ if(curr_game_state == GAME_STATE.PLAYING)
 	
 	
 	draw_text((room_width/4)*3, 16, string(curr_wave));
+	draw_text((room_width/2), 128, string(global.player_coins));
 	
 	// Hides the cursor
 	window_set_cursor(cr_none);

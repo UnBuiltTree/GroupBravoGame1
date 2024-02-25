@@ -22,35 +22,41 @@ clm_middle = _x_center
 clm_mid_right = _x_center + (room_width/6)
 clm_right = _x_center + (room_width/4)
 
+//a func to creat all the buttons for the upgrade menu ~Weston
 create_buttons = function(){
 	instance_create_layer(_x_center, row_top, "Buttons", obj_next_floor);
 	
 	switch (global.player_gun_type) {
 	    case 0:
-	        instance_create_layer(clm_middle, row_middle, "Buttons", obj_upgrd_btn_turret);
+			instance_create_layer(clm_mid_left, row_middle, "Buttons", obj_upgrd_btn_turret);
+	        instance_create_layer(clm_mid_right, row_middle, "Buttons", obj_upgrd_btn_firerate);
 	        break;
 		case 4:
-	        instance_create_layer(clm_middle, row_middle, "Buttons", obj_dngrd_btn_turret);
+	        instance_create_layer(clm_mid_left, row_middle, "Buttons", obj_dngrd_btn_turret);
+			instance_create_layer(clm_mid_right, row_middle, "Buttons", obj_upgrd_btn_firerate);
 	        break;
 	    default:
-	        instance_create_layer(clm_mid_right, row_middle, "Buttons", obj_upgrd_btn_turret);
-			instance_create_layer(clm_mid_left, row_middle, "Buttons", obj_dngrd_btn_turret);
+			instance_create_layer(clm_left, row_middle, "Buttons", obj_dngrd_btn_turret);
+	        instance_create_layer(clm_middle, row_middle, "Buttons", obj_upgrd_btn_turret);
+			instance_create_layer(clm_right, row_middle, "Buttons", obj_upgrd_btn_firerate);
 	        break;
 	}
 }
 
+//A func to destoy all buttons ~Weston
 destoy_buttons = function(){
 layer_destroy_instances("Buttons")
 }
 
+//A func to refresh buttons for the upgrade menu ~Weston
 refresh_buttons = function(){
+	//calls func to destoy all buttons
 	destoy_buttons()
-	
+	//updates the player_gun_type_max value if needed
 	if (global.player_gun_type > global.player_gun_type_max){
 	global.player_gun_type_max = global.player_gun_type
 	}
-	
-	
+	//creates new buttons
 	create_buttons()
 }
 

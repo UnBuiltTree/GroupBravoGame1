@@ -8,6 +8,7 @@ if (owner.object_index == obj_player)
 		var _owner_id = owner.player_local_id;
 		// Sets inital score
 		var _score = 100;
+		var _coins = 1;
 		
 		// Changes the enemy to flashed
 		other.is_flashed = true;
@@ -22,6 +23,7 @@ if (owner.object_index == obj_player)
 		{
 			// Changes possible score to 300
 			_score = 300;
+			_coins = 3;
 		}
 	
 		// Loops through players
@@ -31,7 +33,8 @@ if (owner.object_index == obj_player)
 			if (self.player_local_id == _owner_id)
 			{
 				// Increases the players score
-				self.player_score += _score;
+				global.player_score += _score;
+				global.player_coins += _coins;
 			}
 		}
 	}
