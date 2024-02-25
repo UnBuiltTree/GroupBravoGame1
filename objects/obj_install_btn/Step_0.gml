@@ -44,15 +44,6 @@ if (image_xscale != target_scale || image_yscale != target_scale)
 // Checks if the pressed state is true
 if (is_pressed)
 {
-	if (is_locked = false){
-		/*show_debug_message("Turret type:"+string(global.player_gun_type))
-		show_debug_message("never pressed:"+string(never_pressed))*/
-		global.player_gun_type = turret_lvl + 1;
-		is_locked = true;
-		obj_interim_manager.refresh_buttons()
-		/*show_debug_message("never pressed:"+string(never_pressed))
-		show_debug_message("Turret type:"+string(global.player_gun_type))*/
-	} 
 	// Checks if the button has reached its target scale
 	if (image_xscale == target_scale && image_yscale == target_scale)
 	{
@@ -62,7 +53,7 @@ if (is_pressed)
 			// Checks if button sound effect has finished playing
 			if (!audio_exists(sound_button))
 			{
-				
+				room_restart();
 			}
 		}
 		else

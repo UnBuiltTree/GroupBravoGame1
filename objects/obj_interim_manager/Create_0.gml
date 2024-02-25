@@ -5,11 +5,50 @@
 
 // Creates the splash screen squence
 layer_sequence_create("Instances", room_width / 2, room_height / 2, seq_interim_menu);
+_x_center = room_width / 2
+_y_center = room_height / 2
 
-if (global.player_gun_type < 4){
-	instance_create_layer(room_width / 2, room_height / 2, "Buttons", obj_upgrd_btn_turret);
+row_top = _y_center-384;
+row_1 = _y_center-256;
+row_2 = _y_center-128;
+row_middle = _y_center;
+row_4 = _y_center+128;
+row_5 = _y_center+256;
+row_bottom = _y_center+384;
+
+clm_left = _x_center - (room_width/4)
+clm_mid_left = _x_center - (room_width/6)
+clm_middle = _x_center
+clm_mid_right = _x_center + (room_width/6)
+clm_right = _x_center + (room_width/4)
+
+create_buttons = function(){
+	instance_create_layer(_x_center, row_top, "Buttons", obj_next_floor);
+	
+	switch (global.player_gun_type) {
+	    case 0:
+	        instance_create_layer(clm_middle, row_middle, "Buttons", obj_upgrd_btn_turret);
+	        break;
+		case 4:
+	        instance_create_layer(clm_middle, row_middle, "Buttons", obj_dngrd_btn_turret);
+	        break;
+	    default:
+	        instance_create_layer(clm_mid_right, row_middle, "Buttons", obj_upgrd_btn_turret);
+			instance_create_layer(clm_mid_left, row_middle, "Buttons", obj_dngrd_btn_turret);
+	        break;
+	}
 }
 
+destoy_buttons = function(){
+layer_destroy_instances("Buttons")
+}
+
+refresh_buttons = function(){
+	destoy_buttons()
+	create_buttons()
+}
+
+create_buttons()
 
 
 // Makes the cursor show up again

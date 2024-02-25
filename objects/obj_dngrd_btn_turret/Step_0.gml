@@ -47,7 +47,7 @@ if (is_pressed)
 	if (is_locked = false){
 		/*show_debug_message("Turret type:"+string(global.player_gun_type))
 		show_debug_message("never pressed:"+string(never_pressed))*/
-		global.player_gun_type = turret_lvl + 1;
+		global.player_gun_type = turret_lvl - 1;
 		is_locked = true;
 		obj_interim_manager.refresh_buttons()
 		/*show_debug_message("never pressed:"+string(never_pressed))
