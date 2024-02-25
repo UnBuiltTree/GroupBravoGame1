@@ -3,7 +3,8 @@ image_angle = owner.gun_angle;
 
 // Set offset for flash orgin from original gun position
 var _projectile_origin_x = 104;
-var _projectile_origin_y = -2;
+//var _projectile_origin_y = -2;
+var _projectile_origin_y = player_instance._projectile_offset -2 ;
 	
 // Store the angle in radians
 var _theta = degtorad(image_angle);

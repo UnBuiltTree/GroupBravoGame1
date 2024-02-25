@@ -1,3 +1,41 @@
+
+switch (global.player_gun_type) {
+    case 0:
+		//default gun (1 barrel)
+        _player_gun = spr_player_gun_0
+		gun_fire_rate = 1;
+        break;
+	case 1:
+		//double trouble (2 barrel)
+        _player_gun = spr_player_gun_1
+		gun_fire_rate = 1/2;
+        break;
+	case 2:
+		//triple threat (3 barrel)
+        _player_gun = spr_player_gun_2
+		gun_fire_rate = 1/3;
+        break;
+	case 3:
+		//quad barrel (4 barrel)
+        _player_gun = spr_player_gun_3
+		gun_fire_rate = 1/4;
+        break;
+	case 4:
+		//auto-cannon (1 barrel, High Fire rate)
+		_player_gun = spr_player_gun_4
+		gun_fire_rate = 1/6;
+		break;
+    default:
+        _player_gun = spr_player_gun_0
+		gun_fire_rate = 1;
+        break;
+}
+
+//upgrd_fire_rate = global.player_upgrd_fire_rate;
+upgrd_fire_rate = 1;
+
+player_initialize = function()
+{
 // Variable for local player id
 player_local_id = 0;
 // Variable for player score
@@ -10,7 +48,7 @@ player_curr_ammo = 31;
 // Variable for player max ammo
 player_max_ammo = 31;
 // Variable for player fire rate
-player_fire_rate = 0.25;
+player_fire_rate = gun_fire_rate / upgrd_fire_rate;
 // Variable for firing cooldown
 player_fire_cooldown = 0;
 // Variable for reload rate
@@ -68,6 +106,13 @@ hud_health_alpha = 0;
 // Variable for storing players reloading sound
 reloading_sound = -1;
 
+_cur_barrel = 0;
+}
+
+player_initialize()
+
+
+
 // Creates new particle emitter for dust smoke on left
 var _new_dust_1 = instance_create_depth(x, y, depth - 1, obj_particle_handler);
 _new_dust_1.owner = self;
@@ -87,8 +132,78 @@ _new_dust_3.set_dust_smoke(3);
 create_projectile = function(_gun_angle)
 {
 	// Offsets for players gun position
-	var _projectile_origin_x = 110;
-	var _projectile_origin_y = 0;
+	var _projectile_origin_x = 104;
+	
+	switch (global.player_gun_type) {
+    case 0:
+		_projectile_offset = 0;
+        break;
+	case 1:
+		switch (_cur_barrel) {
+		    case 0:
+		        _projectile_offset = 18;
+				_cur_barrel = 1;
+				show_debug_message("current_barrel: " + string(_cur_barrel));
+		        break;
+			case 1:
+		        _projectile_offset = -18;
+				_cur_barrel = 0;
+				show_debug_message("current_barrel: " + string(_cur_barrel));
+		        break;
+		}
+        break;
+	case 2:
+		switch (_cur_barrel) {
+		    case 0:
+		        _projectile_offset = 20;
+				_cur_barrel = 1;
+				show_debug_message("current_barrel: " + string(_cur_barrel));
+		        break;
+			case 1:
+		        _projectile_offset = 0;
+				_cur_barrel = 2;
+				show_debug_message("current_barrel: " + string(_cur_barrel));
+		        break;
+			case 2:
+		        _projectile_offset = -20;
+				_cur_barrel = 0;
+				show_debug_message("current_barrel: " + string(_cur_barrel));
+		        break;
+		}
+        break;
+	case 3:
+		switch (_cur_barrel) {
+		    case 0:
+		        _projectile_offset = 22;
+				_cur_barrel = 1;
+				show_debug_message("current_barrel: " + string(_cur_barrel));
+		        break;
+			case 1:
+		        _projectile_offset = -8;
+				_cur_barrel = 2;
+				show_debug_message("current_barrel: " + string(_cur_barrel));
+		        break;
+			case 2:
+		        _projectile_offset = 8;
+				_cur_barrel = 3;
+				show_debug_message("current_barrel: " + string(_cur_barrel));
+		        break;
+			case 3:
+		        _projectile_offset = -22;
+				_cur_barrel = 0;
+				show_debug_message("current_barrel: " + string(_cur_barrel));
+		        break;
+		}
+        break;
+	case 4:
+		_projectile_offset = 0;
+        break;
+    default:
+        _projectile_offset = 0;
+        break;
+}
+
+var _projectile_origin_y = _projectile_offset;
 	
 	// Gun angle stored in radians
 	var _theta = degtorad(_gun_angle);
@@ -149,7 +264,7 @@ trigger_pressed = function()
 		
 		// Offsets used for gun jam smoke
 		var _projectile_origin_x = 110;
-		var _projectile_origin_y = 0;
+		var _projectile_origin_y = _projectile_offset;
 	
 		// Angle smoke is created from
 		var _theta = degtorad(gun_angle);

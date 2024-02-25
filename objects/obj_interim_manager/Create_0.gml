@@ -6,6 +6,12 @@
 // Creates the splash screen squence
 layer_sequence_create("Instances", room_width / 2, room_height / 2, seq_interim_menu);
 
+if (global.player_gun_type < 4){
+	instance_create_layer(room_width / 2, room_height / 2, "Buttons", obj_upgrd_btn_turret);
+}
+
+
+
 // Makes the cursor show up again
 window_set_cursor(cr_default);
 
