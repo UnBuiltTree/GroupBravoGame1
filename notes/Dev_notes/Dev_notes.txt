@@ -1,0 +1,17 @@
+global.floor_number, keeps track of the current floor number
+	used by a switch in obj_game_manager.
+	currently we have 4 floors.
+		0 - starting floor
+		1 - floor 2
+		2 - floor 3
+		default - if the floor count isnt a number above it defaults to this case.
+
+global.player_gun_type, keeps track of the players turret type
+	currently used by switches in obj_player and obj_upgrd_btn_turret.
+	Has 5 types
+		0 - default turret
+		1 - twin barrel turret
+		2 - triple barrel turret
+		3 - quad barrel turret
+		4 - auto-cannon turret
+		

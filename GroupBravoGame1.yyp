@@ -83,6 +83,7 @@
     {"id":{"name":"spr_player_body","path":"sprites/spr_player_body/spr_player_body.yy",},},
     {"id":{"name":"ts_player_gun","path":"tilesets/ts_player_gun/ts_player_gun.yy",},},
     {"id":{"name":"snd_menu_button","path":"sounds/snd_menu_button/snd_menu_button.yy",},},
+    {"id":{"name":"Dev_notes","path":"notes/Dev_notes/Dev_notes.yy",},},
     {"id":{"name":"snd_music_game_2","path":"sounds/snd_music_game_2/snd_music_game_2.yy",},},
     {"id":{"name":"ps_character_defeat","path":"particles/ps_character_defeat/ps_character_defeat.yy",},},
     {"id":{"name":"spr_player_gun_3","path":"sprites/spr_player_gun_3/spr_player_gun_3.yy",},},
