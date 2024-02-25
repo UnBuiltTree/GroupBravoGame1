@@ -2,8 +2,8 @@
 text_1 = "YOU LOSE";
 text_2 = "";
 player_score = 0;
-font_1 = fnt_luckiest_guy_96_outline;
-font_2 = fnt_luckiest_guy_36_outline;
+font_1 = fnt_agency_fb_96_outline;
+font_2 = fnt_agency_fb_36_outline;
 colour = c_white;
 halign = fa_center;
 valign = fa_middle;
@@ -13,14 +13,14 @@ player_score = obj_player.player_score;
 text_2 = "SCORE: " + string(player_score);
 
 // Sets font to have outline effect
-font_enable_effects(fnt_luckiest_guy_96_outline, true, {
+font_enable_effects(fnt_agency_fb_96_outline, true, {
     outlineEnable: true,
     outlineDistance: 4,
     outlineColour: c_black
 });
 
 // Sets font to have outline effect
-font_enable_effects(fnt_luckiest_guy_36_outline, true, {
+font_enable_effects(fnt_agency_fb_36_outline, true, {
     outlineEnable: true,
     outlineDistance: 2,
     outlineColour: c_black

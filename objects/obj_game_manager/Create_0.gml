@@ -98,7 +98,7 @@ level_initialize = function()
 	grid = mp_grid_create(0, 0, arena_grid_width * grid_rate, arena_grid_height * grid_rate, cell_width / grid_rate, cell_height / grid_rate);
 
 	// Variables used for the score font used in the hud
-	score_font = fnt_luckiest_guy_48;
+	score_font = fnt_agency_fb_48;
 	score_colour = c_white;
 	score_alpha = 0.75;
 	score_halign = fa_center;

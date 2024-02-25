@@ -54,21 +54,21 @@ else
 
 // Variables used for highscore text
 text = "HIGH SCORES";
-font_1 = fnt_luckiest_guy_96_outline;
-font_2 = fnt_luckiest_guy_36_outline;
+font_1 = fnt_agency_fb_96_outline;
+font_2 = fnt_agency_fb_36_outline;
 colour = c_white;
 halign = fa_center;
 valign = fa_middle;
 
 // Sets font to have outline effect
-font_enable_effects(fnt_luckiest_guy_96_outline, true, {
+font_enable_effects(fnt_agency_fb_96_outline, true, {
     outlineEnable: true,
     outlineDistance: 4,
     outlineColour: c_black
 });
 
 // Sets font to have outline effect
-font_enable_effects(fnt_luckiest_guy_36_outline, true, {
+font_enable_effects(fnt_agency_fb_36_outline, true, {
     outlineEnable: true,
     outlineDistance: 2,
     outlineColour: c_black

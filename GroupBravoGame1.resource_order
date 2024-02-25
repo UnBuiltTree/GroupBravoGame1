@@ -2,13 +2,13 @@
   "FolderOrderSettings": [
     {"name":"Animation Curves","order":6,"path":"folders/Animation Curves.yy",},
     {"name":"Extensions","order":7,"path":"folders/Extensions.yy",},
+    {"name":"Upgrd_Buttons","order":2,"path":"folders/Objects/UI/Buttons/Upgrd_Buttons.yy",},
     {"name":"Paths","order":2,"path":"folders/Paths.yy",},
     {"name":"Scripts","order":3,"path":"folders/Scripts.yy",},
     {"name":"Shaders","order":4,"path":"folders/Shaders.yy",},
+    {"name":"Upgrd_Buttons","order":1,"path":"folders/Sprites/UI/Menus/Upgrd_Buttons.yy",},
     {"name":"Tile Sets","order":1,"path":"folders/Tile Sets.yy",},
     {"name":"Timelines","order":5,"path":"folders/Timelines.yy",},
-    {"name":"Upgrd_Buttons","order":2,"path":"folders/Objects/UI/Buttons/Upgrd_Buttons.yy",},
-    {"name":"Upgrd_Buttons","order":1,"path":"folders/Sprites/UI/Menus/Upgrd_Buttons.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"obj_interim_manager","order":1,"path":"objects/obj_interim_manager/obj_interim_manager.yy",},
