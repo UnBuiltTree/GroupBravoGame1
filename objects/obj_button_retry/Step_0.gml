@@ -53,12 +53,15 @@ if (is_pressed)
 			// Checks if button sound effect has finished playing
 			if (!audio_exists(sound_button))
 			{
+					global.player_coins = 0;
+					room_restart();
 				// Restarts the current room
-				room_restart();
+
 			}
 		}
 		else
-		{
+		{	
+			
 			// Sets the target scale to full (1)
 			target_scale = 1.0;	
 		}

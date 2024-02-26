@@ -44,6 +44,13 @@ if (image_xscale != target_scale || image_yscale != target_scale)
 // Checks if the pressed state is true
 if (is_pressed)
 {
+	if (is_locked = false){
+		global.player_coins = global.player_coins - _cost;
+		global.player_firerate_upgrd++;
+		global.firerate_cost = _cost + 5;
+		is_locked = true;
+		obj_interim_manager.refresh_buttons()
+	} 
 	// Checks if the button has reached its target scale
 	if (image_xscale == target_scale && image_yscale == target_scale)
 	{
@@ -53,7 +60,7 @@ if (is_pressed)
 			// Checks if button sound effect has finished playing
 			if (!audio_exists(sound_button))
 			{
-				room_restart();
+				
 			}
 		}
 		else

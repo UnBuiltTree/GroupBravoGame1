@@ -304,6 +304,8 @@ if (obj_game_manager.curr_game_state != GAME_STATE.PAUSED)
 		{
 			// reduces the fireing cooldown
 			player_fire_cooldown -= delta_time * 0.000001;	
+		} else if (player_fire_cooldown <= 0) {
+			_burstfire_num = 0;
 		}
 		
 		// Checks if the player is flashed

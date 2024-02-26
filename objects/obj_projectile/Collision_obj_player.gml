@@ -17,7 +17,7 @@ if (owner.id != other.id)
 				if (self.player_local_id == _owner_id)
 				{
 					// Increases the players score by 500
-					self.player_score += 500;
+					global.player_score += 500;
 				}
 			}
 		}
@@ -28,7 +28,7 @@ if (owner.id != other.id)
 		other.hud_health_alpha = 1.0;
 		// Reduces the players health
 		other.player_health--;
-		
+		global.player_score = global.player_score - 200;
 		// Plays player hit sound effect
 		var _sound_player_hit = audio_play_sound(snd_player_hit, 100, false, 0.6, 0, 1.0);
 	}
