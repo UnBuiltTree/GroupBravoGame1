@@ -15,3 +15,21 @@ global.player_gun_type, keeps track of the players turret type
 		3 - quad barrel turret
 		4 - auto-cannon turret
 		
+global.player_gun_type_max = 0;
+	Keeps track of the highest gun the player has bought
+
+global.player_score = 0;
+	Keeps track of the players score
+
+global.player_coins = 0;
+	Keeps track of the players coin count
+
+global.player_firerate_upgrd = 0;
+	Keeps track of the players firerate upgrade number
+
+global.firerate_cost = 25;
+	Keeps track of how much the firerate upgrade cost
+
+
+
+		
