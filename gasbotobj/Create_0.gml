@@ -4,7 +4,7 @@ owner = noone;
 target = noone;
 
 // Variable used to store enemy health
-curr_health = 3;
+curr_health = 1;
 
 // Variable used for controlling when spawned logic should continue
 is_spawning = true;
@@ -31,7 +31,7 @@ node_threshold = ((obj_game_manager.cell_width + obj_game_manager.cell_height) /
 // Variable used for the rotation speed
 rotation_speed = 0.1;
 // Variable used for maximum possible speed
-max_speed = 2.5;
+max_speed = 5;
 // Variable used for slowing down enemy when certain collisions occur
 speed_dropoff = 0.1;
 // Variable used for speeding up and slowing down enemy

@@ -4,7 +4,7 @@ owner = noone;
 target = noone;
 
 // Variable used to store enemy health
-curr_health = 1;
+curr_health = 2;
 
 // Variable used for controlling when spawned logic should continue
 is_spawning = true;
@@ -31,7 +31,7 @@ node_threshold = ((obj_game_manager.cell_width + obj_game_manager.cell_height) /
 // Variable used for the rotation speed
 rotation_speed = 0.1;
 // Variable used for maximum possible speed
-max_speed = 3;
+max_speed = 7;
 // Variable used for slowing down enemy when certain collisions occur
 speed_dropoff = 0.1;
 // Variable used for speeding up and slowing down enemy
@@ -150,3 +150,9 @@ create_projectile_enemy = function()
 var _new_indicator = instance_create_layer(x, y, "GM", obj_enemy_indicator);
 // Sets the indicator object target to the enemy
 _new_indicator.target = self;
+
+
+
+
+
+

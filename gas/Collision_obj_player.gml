@@ -1,0 +1,9 @@
+other.player_health--;
+
+
+
+
+
+
+
+
