@@ -34,7 +34,9 @@ switch (global.floor_number) {
 		gap_min= 2;
 		// Max is the maximum amount of gaps a level can have before it stops making more
 		gap_max= 8;
-	
+		
+		// Variable used for the enemy spawn rate
+		_enemy_rate = 0.1;
 		max_enemies = 40;
         break;
 	case 1:
@@ -47,7 +49,8 @@ switch (global.floor_number) {
 		gap_count= 0;
 		gap_min= 2;
 		gap_max= 8;
-	
+		
+		_enemy_rate = 0.1;
 		max_enemies = 40;
         break;
 	case 2:
@@ -60,7 +63,8 @@ switch (global.floor_number) {
 		gap_count= 0;
 		gap_min= 2;
 		gap_max= 8;
-	
+		
+		_enemy_rate = 0.1;
 		max_enemies = 40;
         break;
     default:
@@ -73,7 +77,8 @@ switch (global.floor_number) {
 		gap_count= 0;
 		gap_min= 4;
 		gap_max= 10;
-	
+		
+		_enemy_rate = 0.15;
 		max_enemies = 40;
         break;
 }
@@ -561,8 +566,6 @@ wave_incoming = function()
 // Function used for calling a new wave through the spawners
 wave_new_spawners = function()
 {
-	// Variable used for the enemy spawn rate
-	var _enemy_rate = 0.1;
 	
 	// Variable that calculates how many enemies will spawn based on the room size, current wave and enemy rate
 	var _enemy_count = ceil((arena_grid_width - 2)  * (arena_grid_height - 2) * _enemy_rate * curr_wave);

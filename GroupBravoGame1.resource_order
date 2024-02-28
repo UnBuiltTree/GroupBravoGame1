@@ -26,5 +26,6 @@
     {"name":"spr_player_gun_2","order":2,"path":"sprites/spr_player_gun_2/spr_player_gun_2.yy",},
     {"name":"rm_interim_menu","order":2,"path":"rooms/rm_interim_menu/rm_interim_menu.yy",},
     {"name":"seq_interim_menu","order":2,"path":"sequences/seq_interim_menu/seq_interim_menu.yy",},
+    {"name":"spr_player_shield","order":5,"path":"sprites/spr_player_shield/spr_player_shield.yy",},
   ],
 }
