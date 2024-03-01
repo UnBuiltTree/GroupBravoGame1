@@ -34,7 +34,9 @@ switch (global.floor_number) {
 		gap_min= 2;
 		// Max is the maximum amount of gaps a level can have before it stops making more
 		gap_max= 8;
-	
+		
+		// Variable used for the enemy spawn rate
+		_enemy_rate = 0.1;
 		max_enemies = 40;
         break;
 	case 1:
@@ -47,7 +49,8 @@ switch (global.floor_number) {
 		gap_count= 0;
 		gap_min= 2;
 		gap_max= 8;
-	
+		
+		_enemy_rate = 0.1;
 		max_enemies = 40;
         break;
 	case 2:
@@ -60,7 +63,8 @@ switch (global.floor_number) {
 		gap_count= 0;
 		gap_min= 2;
 		gap_max= 8;
-	
+		
+		_enemy_rate = 0.1;
 		max_enemies = 40;
         break;
     default:
@@ -73,7 +77,8 @@ switch (global.floor_number) {
 		gap_count= 0;
 		gap_min= 4;
 		gap_max= 10;
-	
+		
+		_enemy_rate = 0.15;
 		max_enemies = 40;
         break;
 }
@@ -561,8 +566,6 @@ wave_incoming = function()
 // Function used for calling a new wave through the spawners
 wave_new_spawners = function()
 {
-	// Variable used for the enemy spawn rate
-	var _enemy_rate = 0.1;
 	
 	// Variable that calculates how many enemies will spawn based on the room size, current wave and enemy rate
 	var _enemy_count = ceil((arena_grid_width - 2)  * (arena_grid_height - 2) * _enemy_rate * curr_wave);
@@ -601,15 +604,17 @@ interim_menu = function()
 	
 	// Sets the current game state to ended ~Weston
 	//show_debug_message("Floor Number, interim menu func: " + string(global.floor_number));
-	curr_game_state = GAME_STATE.INTERIM;
-	room_goto(rm_interim_menu);
-	global.floor_number = global.floor_number + 1;
-	//show_debug_message("Floor Number, interim menu func: " + string(global.floor_number));
-	//show_debug_message("room_goto(rm_interim_menu) interim menu func");
-	// Stops the current game music
-	audio_stop_sound(music);
-	// Resets music
-	music = -1;
+	if (curr_game_state != GAME_STATE.ENDED){
+		curr_game_state = GAME_STATE.INTERIM;
+		room_goto(rm_interim_menu);
+		global.floor_number = global.floor_number + 1;
+		//show_debug_message("Floor Number, interim menu func: " + string(global.floor_number));
+		//show_debug_message("room_goto(rm_interim_menu) interim menu func");
+		// Stops the current game music
+		audio_stop_sound(music);
+		// Resets music
+		music = -1;
+	}
 }
 
 // Function called for when the player loses the game

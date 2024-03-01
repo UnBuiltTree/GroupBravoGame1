@@ -189,6 +189,7 @@
     {"id":{"name":"spr_enemy_part_2","path":"sprites/spr_enemy_part_2/spr_enemy_part_2.yy",},},
     {"id":{"name":"snd_fireball_spark","path":"sounds/snd_fireball_spark/snd_fireball_spark.yy",},},
     {"id":{"name":"obj_button_leaderboard","path":"objects/obj_button_leaderboard/obj_button_leaderboard.yy",},},
+    {"id":{"name":"spr_player_shield","path":"sprites/spr_player_shield/spr_player_shield.yy",},},
     {"id":{"name":"spr_grass_top_gap","path":"sprites/spr_grass_top_gap/spr_grass_top_gap.yy",},},
     {"id":{"name":"obj_button_main_menu","path":"objects/obj_button_main_menu/obj_button_main_menu.yy",},},
     {"id":{"name":"spr_joystick_tap","path":"sprites/spr_joystick_tap/spr_joystick_tap.yy",},},
