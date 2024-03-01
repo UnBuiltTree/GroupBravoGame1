@@ -53,6 +53,7 @@ player_fire_rate = gun_fire_rate / upgrd_fire_rate;
 // Variable for firing cooldown
 player_fire_cooldown = 0;
 
+
 _burstfire_num = 0;
 
 // Variable for reload rate

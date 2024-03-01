@@ -3,6 +3,9 @@ owner = noone;
 // Variable used for setting what player to target
 target = noone;
 
+//Enemy contact damage cooldown
+contact_damage_cooldown = 0;
+
 // Variable used to store enemy health
 curr_health = 3;
 
