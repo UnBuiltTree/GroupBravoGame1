@@ -51,6 +51,7 @@ if (is_pressed)
 			global.player_coins = global.player_coins - _cost;
 		}
 		global.player_gun_type = turret_lvl + 1;
+		global.player_gun_spread_lvl = global.player_gun_spread_lvl + _spread_cost;
 		is_locked = true;
 		obj_interim_manager.refresh_buttons()
 		/*show_debug_message("never pressed:"+string(never_pressed))

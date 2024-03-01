@@ -6,22 +6,27 @@ switch (global.player_gun_type) {
 	case 0:
 		turret_type = "Twin-Turret"
 		_cost = 10;
+		_spread_cost = 10;
 	break;
 	case 1:
 		turret_type = "Triple-Threat"
 		_cost = 15;
+		_spread_cost = 10;
 	break;
 	case 2:
 		turret_type = "Quad-Barrel"
 		_cost = 25;
+		_spread_cost = 10;
 	break;
 	case 3:
 		turret_type = "Auto-Cannon"
 		_cost = 40;
+		_spread_cost = 20;
 	break;
 	default:
 		turret_type = "Upgrade-Gun"
 		_cost = 10;
+		_spread_cost = 5;
 	break;
 }
 if (global.player_gun_type == global.player_gun_type_max){

@@ -10,11 +10,17 @@ speed = 20;
 // Variable used for storing the speed when the game is paused
 last_speed = speed;
 
+// default _spread value
+_spread = 0;
 // Function called when the projectile is fired from a player
 correct_player = function()
 {
 	// Sets sprite to player fireball
 	sprite_index = spr_player_fireball;
+	spread_counter = 0;
+	spread_limit = 100;
+	spread = global.player_gun_spread_lvl/40;
+	_spread = irandom_range(spread*-1, spread);
 	
 	// Sets direction of projectile to the players gun angle
 	direction = owner.gun_angle;
@@ -41,7 +47,10 @@ correct_enemy = function()
 {
 	// Sets the sprite to enemy fireball
 	sprite_index = spr_enemy_fireball;
-	
+	spread_counter = 0;
+	spread_limit = 100;
+	spread = 20/40;
+	_spread = irandom_range(spread*-1, spread);
 	// Sets the direction to the fire from the enemy postion towards its targets position
 	direction = point_direction(owner.x, owner.y, owner.target.x, owner.target.y);
 	// Sets the image angle to this direction
