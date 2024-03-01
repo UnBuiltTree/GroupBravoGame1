@@ -66,7 +66,7 @@ if (owner.id != other.id)
 		if (contact_damage_cooldown > 0)
 		{
 			// reduces the fireing cooldown
-			contact_damage_cooldown -= delta_time * 0.000015;
+			contact_damage_cooldown -= delta_time * 0.000001;
 		}
 		// Sets the player to flashed state
 		other.is_flashed = true;
