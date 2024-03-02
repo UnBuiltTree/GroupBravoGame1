@@ -1,5 +1,5 @@
 // Draws players shadow sprite
-draw_sprite_ext(spr_player_shadow, 0,x, y, 1.0, 1.0, body_angle, c_white, image_alpha);
+// draw_sprite_ext(spr_player_shadow, 0,x, y, 1.0, 1.0, body_angle, c_white, image_alpha);
 
 // Checks if player is flashed
 /*if (is_flashed)
