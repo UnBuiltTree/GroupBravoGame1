@@ -22,6 +22,7 @@
     {"name":"obj_dngrd_btn_turret","order":2,"path":"objects/obj_dngrd_btn_turret/obj_dngrd_btn_turret.yy",},
     {"name":"obj_upgrd_btn_turret","order":3,"path":"objects/obj_upgrd_btn_turret/obj_upgrd_btn_turret.yy",},
     {"name":"spr_red_button_lockable","order":2,"path":"sprites/spr_red_button_lockable/spr_red_button_lockable.yy",},
+    {"name":"obj_upgrd_btn_accuracy","order":4,"path":"objects/obj_upgrd_btn_accuracy/obj_upgrd_btn_accuracy.yy",},
     {"name":"rm_main_menu","order":1,"path":"rooms/rm_main_menu/rm_main_menu.yy",},
     {"name":"spr_obstacle_5","order":2,"path":"sprites/spr_obstacle_5/spr_obstacle_5.yy",},
     {"name":"seq_splash","order":1,"path":"sequences/seq_splash/seq_splash.yy",},

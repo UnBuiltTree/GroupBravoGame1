@@ -45,14 +45,11 @@ if (image_xscale != target_scale || image_yscale != target_scale)
 if (is_pressed)
 {
 	if (is_locked = false){
-		/*show_debug_message("Turret type:"+string(global.player_gun_type))
-		show_debug_message("never pressed:"+string(never_pressed))*/
-		global.player_gun_type = turret_lvl - 1;
-		global.player_gun_spread_lvl = global.player_gun_spread_lvl - _spread_cost;
+		global.player_coins = global.player_coins - _cost;
+		global.player_gun_spread_lvl = global.player_gun_spread_lvl - added_accuracy;
+		global.accuracy_cost = _cost + 10;
 		is_locked = true;
 		obj_interim_manager.refresh_buttons()
-		/*show_debug_message("never pressed:"+string(never_pressed))
-		show_debug_message("Turret type:"+string(global.player_gun_type))*/
 	} 
 	// Checks if the button has reached its target scale
 	if (image_xscale == target_scale && image_yscale == target_scale)

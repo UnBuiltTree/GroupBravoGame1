@@ -120,6 +120,7 @@
     {"id":{"name":"snd_explosion","path":"sounds/snd_explosion/snd_explosion.yy",},},
     {"id":{"name":"snd_music_round_clear","path":"sounds/snd_music_round_clear/snd_music_round_clear.yy",},},
     {"id":{"name":"spr_flower_blue","path":"sprites/spr_flower_blue/spr_flower_blue.yy",},},
+    {"id":{"name":"obj_upgrd_btn_accuracy","path":"objects/obj_upgrd_btn_accuracy/obj_upgrd_btn_accuracy.yy",},},
     {"id":{"name":"snd_enemy_hit","path":"sounds/snd_enemy_hit/snd_enemy_hit.yy",},},
     {"id":{"name":"spr_grass_right_gap","path":"sprites/spr_grass_right_gap/spr_grass_right_gap.yy",},},
     {"id":{"name":"spr_button_leaderboard","path":"sprites/spr_button_leaderboard/spr_button_leaderboard.yy",},},

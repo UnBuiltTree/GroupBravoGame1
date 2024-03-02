@@ -4,6 +4,7 @@ global.player_score = 0;
 global.player_coins = 0;
 global.player_firerate_upgrd = 0;
 global.firerate_cost = 25;
+global.accuracy_cost = 10;
 global.player_gun_type = 0;
 global.player_gun_type_max = 0;
 global.player_gun_spread_lvl = 10;

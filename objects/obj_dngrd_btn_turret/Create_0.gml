@@ -5,15 +5,19 @@ switch (global.player_gun_type) {
 	//the case her means the next turret_type name so everything is one behind
 	case 1:
 		turret_type = "Default-Gun"
+		_spread_cost = 20;
 	break;
 	case 2:
 		turret_type = "Twin-Turret"
+		_spread_cost = 20;
 	break;
 	case 3:
 		turret_type = "Triple-Threat"
+		_spread_cost = 20;
 	break;
 	case 4:
 		turret_type = "Quad-Barrel"
+		_spread_cost = 40;
 	break;
 	default:
 	turret_type = "downgrade-Gun"
