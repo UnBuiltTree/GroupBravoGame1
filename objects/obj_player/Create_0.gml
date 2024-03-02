@@ -58,9 +58,9 @@ player_score = 0;
 player_health = global.player_hp_lvl;
 
 // Variable for player ammo
-player_curr_ammo = 31;
+player_curr_ammo = global.player_ammo_lvl * 8;
 // Variable for player max ammo
-player_max_ammo = 31;
+player_max_ammo = global.player_ammo_lvl * 8;
 // Variable for player fire rate
 player_fire_rate = gun_fire_rate / upgrd_fire_rate;
 

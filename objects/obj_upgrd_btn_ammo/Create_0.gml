@@ -1,8 +1,8 @@
 // Variables for the retry button text
-armor_lvl = global.player_hp_lvl
-added_hp = 3;
-_cost = global.armor_cost;
-text = "Armor " + string(armor_lvl/3) +" [" + string(_cost) + "]";
+ammo_lvl = global.player_ammo_lvl
+added_ammo_lvl = 1;
+_cost = global.ammo_cost;
+text = "Ammo " + string(ammo_lvl) +" [" + string(_cost) + "]";
 
 font = fnt_agency_fb_24;
 colour = c_black;
@@ -19,7 +19,7 @@ can_scale_at_rate = false;
 // Variable for pressed state
 is_pressed = false;
 
-if (global.player_coins < _cost || armor_lvl >= 9){
+if (global.player_coins < _cost){
 	is_locked = true;
 } else {
 	is_locked = false;
