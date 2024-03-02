@@ -5,9 +5,11 @@ global.player_coins = 0;
 global.player_firerate_upgrd = 0;
 global.firerate_cost = 25;
 global.accuracy_cost = 10;
+global.armor_cost = 10;
 global.player_gun_type = 0;
 global.player_gun_type_max = 0;
 global.player_gun_spread_lvl = 10;
+global.player_hp_lvl = 3;
 
 // Creates the splash screen squence
 layer_sequence_create("Instances", room_width / 2, room_height / 2, seq_splash);

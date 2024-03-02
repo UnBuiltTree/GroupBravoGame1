@@ -126,6 +126,7 @@
     {"id":{"name":"spr_button_leaderboard","path":"sprites/spr_button_leaderboard/spr_button_leaderboard.yy",},},
     {"id":{"name":"obj_banner_wave_clear","path":"objects/obj_banner_wave_clear/obj_banner_wave_clear.yy",},},
     {"id":{"name":"obj_level_ground","path":"objects/obj_level_ground/obj_level_ground.yy",},},
+    {"id":{"name":"obj_upgrd_btn_armor","path":"objects/obj_upgrd_btn_armor/obj_upgrd_btn_armor.yy",},},
     {"id":{"name":"spr_player_shadow","path":"sprites/spr_player_shadow/spr_player_shadow.yy",},},
     {"id":{"name":"spr_box_green","path":"sprites/spr_box_green/spr_box_green.yy",},},
     {"id":{"name":"spr_obstacle_2","path":"sprites/spr_obstacle_2/spr_obstacle_2.yy",},},

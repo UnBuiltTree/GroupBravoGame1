@@ -46,9 +46,8 @@ if (is_pressed)
 {
 	if (is_locked = false){
 		global.player_coins = global.player_coins - _cost;
-		global.player_firerate_upgrd++;
-		global.firerate_cost = _cost + 10;
-		global.player_gun_spread_lvl = global.player_gun_spread_lvl + 5;
+		global.player_hp_lvl = armor_lvl + added_hp;
+		global.armor_cost = _cost + 100;
 		is_locked = true;
 		obj_interim_manager.refresh_buttons()
 	} 

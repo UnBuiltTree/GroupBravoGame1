@@ -30,18 +30,27 @@ create_buttons = function(){
 	    case 0:
 			instance_create_layer(clm_mid_left, row_middle, "Buttons", obj_upgrd_btn_turret);
 	        instance_create_layer(clm_mid_right, row_middle, "Buttons", obj_upgrd_btn_firerate);
-			instance_create_layer(clm_middle, row_bottom, "Buttons", obj_upgrd_btn_accuracy);
+			instance_create_layer(clm_middle, row_4, "Buttons", obj_upgrd_btn_accuracy);
+			if (global.player_hp_lvl < 9){
+				instance_create_layer(clm_middle, row_5, "Buttons", obj_upgrd_btn_armor);
+			}
 	        break;
 		case 4:
 	        instance_create_layer(clm_mid_left, row_middle, "Buttons", obj_dngrd_btn_turret);
 			instance_create_layer(clm_mid_right, row_middle, "Buttons", obj_upgrd_btn_firerate);
-			instance_create_layer(clm_middle, row_bottom, "Buttons", obj_upgrd_btn_accuracy);
+			instance_create_layer(clm_middle, row_4, "Buttons", obj_upgrd_btn_accuracy);
+			if (global.player_hp_lvl < 9){
+				instance_create_layer(clm_middle, row_5, "Buttons", obj_upgrd_btn_armor);
+			}
 	        break;
 	    default:
 			instance_create_layer(clm_left, row_middle, "Buttons", obj_dngrd_btn_turret);
 	        instance_create_layer(clm_middle, row_middle, "Buttons", obj_upgrd_btn_turret);
 			instance_create_layer(clm_right, row_middle, "Buttons", obj_upgrd_btn_firerate);
-			instance_create_layer(clm_middle, row_bottom, "Buttons", obj_upgrd_btn_accuracy);
+			instance_create_layer(clm_middle, row_4, "Buttons", obj_upgrd_btn_accuracy);
+			if (global.player_hp_lvl < 9){
+				instance_create_layer(clm_middle, row_5, "Buttons", obj_upgrd_btn_armor);
+			}
 	        break;
 	}
 }
