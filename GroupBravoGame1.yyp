@@ -46,6 +46,7 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Upgrd_Buttons","folderPath":"folders/Sprites/UI/Menus/Upgrd_Buttons.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Tile Sets","folderPath":"folders/Tile Sets.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Timelines","folderPath":"folders/Timelines.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Player Gun","folderPath":"folders/Sprites/Actors/Player/Player Gun.yy",},
   ],
   "IncludedFiles": [],
   "isEcma": false,
