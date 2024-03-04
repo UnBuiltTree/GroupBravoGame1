@@ -1,14 +1,15 @@
 // Checks the current game state is playing
+
 if(curr_game_state == GAME_STATE.PLAYING)
 {	
 	// Loops through the player objects
 	with (obj_player)
 	{
 		// Draws the hud sprite in the top left corner
-		draw_sprite(spr_hud_background, 0, 0, 0);
+		// draw_sprite(spr_hud_background, 0, 0, 0);
 			
 		// Checks if the player health is above 0
-		if (player_health >= 1)
+		/*if (player_health >= 1)
 		{
 			// Draws the first health bar sprite at full strength
 			draw_sprite_ext(spr_hud_health, 0, 86, 40, 1.0, 1.0, 0, c_white, 1.0);	
@@ -41,22 +42,39 @@ if(curr_game_state == GAME_STATE.PLAYING)
 		{
 			// Draws the first health bar sprite at fade out alpha
 			draw_sprite_ext(spr_hud_health, 0, 86, 40, 1.0, 1.0, 0, c_white, hud_health_alpha);	
+		}*/
+		
+		for (var _i = 0; _i < global.player_hp_lvl; _i++) {
+		    var _x_pos = 86 + 84 * _i; // Starting x position for the first health bar, then move over for each additional bar. Adjust spacing as needed.
+		    var _sprite = spr_hud_health; // Default sprite for the health bar
+		    var _alpha = 1.0; // Default alpha for full health
+    
+		    // Check if this is the last health bar piece for a different sprite
+		    if (_i == global.player_hp_lvl - 1) {
+		        _sprite = spr_hud_health_end; // Change sprite for the last health piece if different
+		    }
+    
+		    // Check if the current health bar should be full strength or faded
+		    if (player_health - 1 < _i) {
+		        _alpha = hud_health_alpha; // Set alpha to faded if player health is less than the current bar index
+		    }
+    
+		    // Draw the health bar sprite
+		    draw_sprite_ext(_sprite, 0, _x_pos, 40, 1.0, 1.0, 0, c_white, _alpha);
 		}
 
 		// Loops through the current ammo count
-		for (var _i = 0; _i < player_curr_ammo; _i++)
-		{
-			// Checks if its the first ammo
-			if (_i == 0)
-			{
-				// Draws the starting ammo sprite
-				draw_sprite(spr_hud_ammo_start, 0, 58, 85);
-			}
-			else
-			{
-				// Draws the remaining ammo sprites at offset based on the loops count
-				draw_sprite(spr_hud_ammo, 0, 53 + (_i) * 11, 85);
-			}
+		for (var _i = 0; _i < player_curr_ammo; _i++) {
+		    // Calculate row and column based on _i
+		    var _row = _i div 32; // 'div' divides and returns the integer quotient (effectively calculating the current row)
+		    var _col = _i mod 32; // 'mod' returns the remainder which represents the column in the current row
+
+		    // Calculate x and y positions based on column and row
+		    var _x_pos = 48 + _col * 10; // Adjust X position based on column
+		    var _y_pos = 85 + _row * 30; // Adjust Y position based on row, change '30' to whatever vertical spacing you prefer
+
+		    // Draw the sprite at the calculated position
+		    draw_sprite(spr_hud_ammo, 0, _x_pos, _y_pos);
 		}
 		
 		// Sets the draw options for the scores text

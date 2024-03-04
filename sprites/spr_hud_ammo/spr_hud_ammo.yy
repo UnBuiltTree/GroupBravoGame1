@@ -2,9 +2,9 @@
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
   "name": "spr_hud_ammo",
-  "bbox_bottom": 10,
+  "bbox_bottom": 15,
   "bbox_left": 0,
-  "bbox_right": 17,
+  "bbox_right": 7,
   "bbox_top": 0,
   "bboxMode": 0,
   "collisionKind": 1,
@@ -13,14 +13,14 @@
   "edgeFiltering": false,
   "For3D": false,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f902263f-05b8-4d6e-8f67-b7d683167a95",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"609c7b49-a891-4156-b5cb-d31c764491ea",},
   ],
   "gridX": 0,
   "gridY": 0,
-  "height": 11,
+  "height": 16,
   "HTile": false,
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"27308b1c-0ee1-4af6-9079-1711893fb010","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"2c441c2d-e83d-42ed-b3b8-89a3b01b9a2d","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
   "origin": 0,
@@ -54,7 +54,7 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"f902263f-05b8-4d6e-8f67-b7d683167a95","path":"sprites/spr_hud_ammo/spr_hud_ammo.yy",},},},"Disabled":false,"id":"e2f17af8-8719-41d5-abcb-d8e899ccced1","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"609c7b49-a891-4156-b5cb-d31c764491ea","path":"sprites/spr_hud_ammo/spr_hud_ammo.yy",},},},"Disabled":false,"id":"a8c78f89-c5bd-4049-9b31-89757728b250","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,
@@ -70,5 +70,5 @@
   },
   "type": 0,
   "VTile": false,
-  "width": 18,
+  "width": 8,
 }

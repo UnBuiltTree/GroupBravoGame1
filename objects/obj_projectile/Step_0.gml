@@ -11,3 +11,11 @@ if (y < wall_buffer || y > (obj_game_manager.arena_grid_height * obj_game_manage
 	// Calls the spark function
 	spark_projectile();
 }
+
+direction = direction + _spread;
+image_angle = image_angle + _spread;
+if (spread_counter <= spread_limit){
+	_spread = 0;
+} else {
+	spread_counter++;
+}

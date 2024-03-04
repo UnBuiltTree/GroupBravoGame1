@@ -24,14 +24,23 @@
     {"name":"obj_dngrd_btn_turret","order":2,"path":"objects/obj_dngrd_btn_turret/obj_dngrd_btn_turret.yy",},
     {"name":"obj_upgrd_btn_turret","order":3,"path":"objects/obj_upgrd_btn_turret/obj_upgrd_btn_turret.yy",},
     {"name":"spr_red_button_lockable","order":2,"path":"sprites/spr_red_button_lockable/spr_red_button_lockable.yy",},
+<<<<<<< HEAD
     {"name":"spr_Gunner_Enemy_Menu","order":6,"path":"sprites/spr_Gunner_Enemy_Menu/spr_Gunner_Enemy_Menu.yy",},
+=======
+    {"name":"obj_upgrd_btn_accuracy","order":4,"path":"objects/obj_upgrd_btn_accuracy/obj_upgrd_btn_accuracy.yy",},
+    {"name":"obj_upgrd_btn_armor","order":5,"path":"objects/obj_upgrd_btn_armor/obj_upgrd_btn_armor.yy",},
+>>>>>>> 38b8542829db84bfedfebf1628a8bd7449450102
     {"name":"rm_main_menu","order":1,"path":"rooms/rm_main_menu/rm_main_menu.yy",},
     {"name":"spr_obstacle_5","order":2,"path":"sprites/spr_obstacle_5/spr_obstacle_5.yy",},
     {"name":"seq_splash","order":1,"path":"sequences/seq_splash/seq_splash.yy",},
     {"name":"spr_blue_button","order":1,"path":"sprites/spr_blue_button/spr_blue_button.yy",},
     {"name":"spr_Bomber_Tank_Menu","order":3,"path":"sprites/spr_Bomber_Tank_Menu/spr_Bomber_Tank_Menu.yy",},
     {"name":"spr_player_gun_2","order":1,"path":"sprites/spr_player_gun_2/spr_player_gun_2.yy",},
+<<<<<<< HEAD
     {"name":"spr_Smelly_Robot_Menu","order":5,"path":"sprites/spr_Smelly_Robot_Menu/spr_Smelly_Robot_Menu.yy",},
+=======
+    {"name":"obj_upgrd_btn_ammo","order":6,"path":"objects/obj_upgrd_btn_ammo/obj_upgrd_btn_ammo.yy",},
+>>>>>>> 38b8542829db84bfedfebf1628a8bd7449450102
     {"name":"rm_interim_menu","order":2,"path":"rooms/rm_interim_menu/rm_interim_menu.yy",},
     {"name":"seq_interim_menu","order":2,"path":"sequences/seq_interim_menu/seq_interim_menu.yy",},
     {"name":"spr_Tank_Base_Menu","order":1,"path":"sprites/spr_Tank_Base_Menu/spr_Tank_Base_Menu.yy",},

@@ -31,6 +31,20 @@ switch (global.player_gun_type) {
         break;
 }
 
+switch (global.player_hp_lvl) {
+    case 3:
+        _player_body = 0
+        break;
+	case 6:
+        _player_body = 2
+        break;
+	case 9:
+        _player_body = 4
+        break;
+    default:
+        break;
+}
+
 //upgrd_fire_rate = global.player_upgrd_fire_rate;
 upgrd_fire_rate = 1 + (global.player_firerate_upgrd/2);
 
@@ -41,12 +55,12 @@ player_local_id = 0;
 // Variable for player score
 player_score = 0;
 // Variable for player health
-player_health = 3;
+player_health = global.player_hp_lvl;
 
 // Variable for player ammo
-player_curr_ammo = 31;
+player_curr_ammo = global.player_ammo_lvl * 8;
 // Variable for player max ammo
-player_max_ammo = 31;
+player_max_ammo = global.player_ammo_lvl * 8;
 // Variable for player fire rate
 player_fire_rate = gun_fire_rate / upgrd_fire_rate;
 
@@ -99,7 +113,7 @@ vspeed = 0;
 last_speed = speed;
 
 // Variable for players flashed state
-is_flashed = false;
+is_flashed = 0;
 // Variable for players immunity time
 flash_time = 0.2;
 // Variable for immunity cooldown
