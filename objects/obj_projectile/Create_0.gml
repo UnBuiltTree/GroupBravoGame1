@@ -18,7 +18,7 @@ correct_player = function()
 	// Sets sprite to player fireball
 	sprite_index = spr_player_fireball;
 	spread_counter = 0;
-	spread_limit = 100;
+	spread_limit = 256;
 	spread = global.player_gun_spread_lvl/40;
 	_spread = irandom_range(spread*-1, spread);
 	

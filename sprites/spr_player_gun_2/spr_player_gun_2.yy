@@ -26,8 +26,8 @@
   "nineSlice": null,
   "origin": 4,
   "parent": {
-    "name": "PowerupBuffs",
-    "path": "folders/Sprites/Actors/Player/PowerupBuffs.yy",
+    "name": "Player Gun",
+    "path": "folders/Sprites/Actors/Player/Player Gun.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

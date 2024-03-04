@@ -1,4 +1,4 @@
-
+//This area is for global, persistant varables.
 global.floor_number = 0;
 global.player_score = 0;
 global.player_coins = 0;
