@@ -2,9 +2,9 @@
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
   "name": "spr_grass_left",
-  "bbox_bottom": 511,
+  "bbox_bottom": 639,
   "bbox_left": 0,
-  "bbox_right": 511,
+  "bbox_right": 639,
   "bbox_top": 0,
   "bboxMode": 0,
   "collisionKind": 1,
@@ -13,14 +13,14 @@
   "edgeFiltering": false,
   "For3D": false,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"0aa55930-01b2-4770-95fc-ccde9cd5dd87",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"d370ed15-e303-4b1e-8c50-cff8f00d39be",},
   ],
   "gridX": 0,
   "gridY": 0,
-  "height": 512,
+  "height": 640,
   "HTile": false,
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"c0b7ce37-6369-412c-a675-e180aa4c5855","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"5a73f0e1-9b99-4bfa-ad1a-3cd9176b6db0","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
   "origin": 0,
@@ -54,7 +54,7 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"0aa55930-01b2-4770-95fc-ccde9cd5dd87","path":"sprites/spr_grass_left/spr_grass_left.yy",},},},"Disabled":false,"id":"856ffa44-13c1-41c3-8df4-29c7a334b588","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"d370ed15-e303-4b1e-8c50-cff8f00d39be","path":"sprites/spr_grass_left/spr_grass_left.yy",},},},"Disabled":false,"id":"0d32bdd6-a347-4f9d-bf26-749ee5dcb3e3","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,
@@ -70,5 +70,5 @@
   },
   "type": 0,
   "VTile": false,
-  "width": 512,
+  "width": 640,
 }

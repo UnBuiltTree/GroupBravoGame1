@@ -36,6 +36,7 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Actors","folderPath":"folders/Sprites/Actors.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Enemy","folderPath":"folders/Sprites/Actors/Enemy.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Player","folderPath":"folders/Sprites/Actors/Player.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Player Gun","folderPath":"folders/Sprites/Actors/Player/Player Gun.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"PowerupBuffs","folderPath":"folders/Sprites/Actors/Player/PowerupBuffs.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Ground Tiles","folderPath":"folders/Sprites/Ground Tiles.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Grass Arena","folderPath":"folders/Sprites/Ground Tiles/Grass Arena.yy",},

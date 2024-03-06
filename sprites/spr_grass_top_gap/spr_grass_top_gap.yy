@@ -2,9 +2,9 @@
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
   "name": "spr_grass_top_gap",
-  "bbox_bottom": 511,
+  "bbox_bottom": 639,
   "bbox_left": 0,
-  "bbox_right": 511,
+  "bbox_right": 639,
   "bbox_top": 0,
   "bboxMode": 0,
   "collisionKind": 1,
@@ -13,14 +13,14 @@
   "edgeFiltering": false,
   "For3D": false,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"1b5a54e1-b23c-4dcb-8baf-c82f516f5dc7",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"3ca553b2-fead-465c-8bf3-76b4a6989c9d",},
   ],
   "gridX": 0,
   "gridY": 0,
-  "height": 512,
+  "height": 640,
   "HTile": false,
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"db0c4c7a-1525-4aaf-bf19-eaad0c95aeb6","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"702cf107-8e2d-4def-9592-4515e77c09f9","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
   "origin": 0,
@@ -54,7 +54,7 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"1b5a54e1-b23c-4dcb-8baf-c82f516f5dc7","path":"sprites/spr_grass_top_gap/spr_grass_top_gap.yy",},},},"Disabled":false,"id":"07745f76-a9bc-4459-92d4-540b4e8786c4","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"3ca553b2-fead-465c-8bf3-76b4a6989c9d","path":"sprites/spr_grass_top_gap/spr_grass_top_gap.yy",},},},"Disabled":false,"id":"cc9526a4-d481-49d2-b7fa-a5ac88b1a6ce","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,
@@ -70,5 +70,5 @@
   },
   "type": 0,
   "VTile": false,
-  "width": 512,
+  "width": 640,
 }
