@@ -93,8 +93,8 @@ level_initialize = function()
 	// Variable for storing the current wave - initally set to 0
 
 	// Variables for cell sizes (background grid pieces)
-	cell_width = 512;
-	cell_height = 512;
+	cell_width = 640;
+	cell_height = 640;
 
 	// Variables for setting up the pathfiding grid
 	// The higher the rate the more precise the pathfinding but more resource demanding
