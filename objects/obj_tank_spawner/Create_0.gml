@@ -1,4 +1,13 @@
 // States used for spawnwer facing
+enum FACE_DIRECTION
+{
+	TOP,
+	RIGHT,
+	BOTTOM,
+	LEFT,
+	SIZE
+}
+
 // Variable used for storing face state
 curr_face_direction = FACE_DIRECTION.SIZE;
 
@@ -13,9 +22,9 @@ spawn_queue = 0;
 spawn_enemy = function()
 {
 	// Creates new enemy object instance
-	var _new_enemy = instance_create_layer(x, y, "Enemies", obj_enemy);
+	var objTank = instance_create_layer(x, y, "Enemies", obj_enemy);
 	// Sets new enemy's owner to the spawner it is created from
-	_new_enemy.owner = self;
+	 objTank.owner = self;
 	
 	// Case statment for the face directions of the spawner
 	switch(curr_face_direction)
@@ -23,30 +32,30 @@ spawn_enemy = function()
 		// Case for the spawner being at the top of level
 		case FACE_DIRECTION.TOP:
 			// Sets the new enemy face direction
-			_new_enemy.image_angle = 90;
+			 objTank.image_angle = 90;
 			// Sets the new enemy speed
-			_new_enemy.vspeed = 3;
+			 objTank.vspeed = 3;
 			break;
 		// Case for the spawner being at the right of level
 		case FACE_DIRECTION.RIGHT:
 			// Sets the new enemy face direction
-			_new_enemy.image_angle = 0;
+			 objTank.image_angle = 0;
 			// Sets the new enemy speed
-			_new_enemy.hspeed = -3;
+			 objTank.hspeed = -3;
 			break;
 		// Case for the spawner being at the bottom of level
 		case FACE_DIRECTION.BOTTOM:
 			// Sets the new enemy face direction
-			_new_enemy.image_angle = 270;
+			 objTank.image_angle = 270;
 			// Sets the new enemy speed
-			_new_enemy.vspeed = -3;
+			 objTank.vspeed = -3;
 			break;
 		// Case for the spawner being at the left of level
 		case FACE_DIRECTION.LEFT:
 			// Sets the new enemy face direction
-			_new_enemy.image_angle = 180;
+			 objTank.image_angle = 180;
 			// Sets the new enemy speed
-			_new_enemy.hspeed = 3;
+			 objTank.hspeed = 3;
 			break;
 	}
 	

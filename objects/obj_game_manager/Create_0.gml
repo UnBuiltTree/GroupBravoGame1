@@ -186,6 +186,12 @@ for (var _i = 0; _i < arena_grid_width; _i++)
 					var _new_spawner = instance_create_layer(_new_wall.x - cell_width / 2, _new_wall.y + cell_height / 2, "Level", obj_enemy_spawner);
 					_new_spawner.curr_face_direction = FACE_DIRECTION.LEFT;
 					
+					var _new_speed_spawner = instance_create_layer(_new_wall.x - cell_width / 2, _new_wall.y + cell_height / 2, "Level", obj_speed_spawner);
+					_new_speed_spawner.curr_face_direction = FACE_DIRECTION.LEFT;
+					
+					var _new_tank_spawner = instance_create_layer(_new_wall.x - cell_width / 2, _new_wall.y + cell_height / 2, "Level", obj_speed_spawner);
+					_new_tank_spawner.curr_face_direction = FACE_DIRECTION.LEFT;
+					
 					// Increases the gap count
 					gap_count++;
 				}
@@ -231,6 +237,12 @@ for (var _i = 0; _i < arena_grid_width; _i++)
 					var _new_spawner = instance_create_layer(_new_wall.x + (3 * cell_width) / 2, _new_wall.y + cell_height / 2, "Level", obj_enemy_spawner);
 					_new_spawner.curr_face_direction = FACE_DIRECTION.RIGHT;
 					
+					var _new_speed_spawner = instance_create_layer(_new_wall.x + (3 * cell_width) / 2, _new_wall.y + cell_height / 2, "Level", obj_speed_spawner);
+					_new_speed_spawner.curr_face_direction = FACE_DIRECTION.RIGHT;
+					
+					var _new_tank_spawner = instance_create_layer(_new_wall.x + (3 * cell_width) / 2, _new_wall.y + cell_height / 2, "Level", obj_tank_spawner);
+					_new_tank_spawner.curr_face_direction = FACE_DIRECTION.RIGHT;
+					
 					// Increases the gap count
 					gap_count++;
 				}
@@ -258,6 +270,10 @@ for (var _i = 0; _i < arena_grid_width; _i++)
 				var _new_spawner = instance_create_layer(_new_wall.x + cell_width / 2, _new_wall.y - cell_height / 2, "Level", obj_enemy_spawner);
 				_new_spawner.curr_face_direction = FACE_DIRECTION.TOP;
 				
+				var _new_tank_spawner = instance_create_layer(_new_wall.x + cell_width / 2, _new_wall.y - cell_height / 2, "Level", obj_tank_spawner);
+				_new_tank_spawner.curr_face_direction = FACE_DIRECTION.TOP;
+
+				
 				// Increases the gap count
 				gap_count++;
 			}
@@ -283,6 +299,12 @@ for (var _i = 0; _i < arena_grid_width; _i++)
 				// Creates an enemy spawner inside the gap location
 				var _new_spawner = instance_create_layer(_new_wall.x + cell_width / 2, _new_wall.y + (3 * cell_height) / 2, "Level", obj_enemy_spawner);
 				_new_spawner.curr_face_direction = FACE_DIRECTION.BOTTOM;
+				
+				var _new_speed_spawner = instance_create_layer(_new_wall.x + cell_width / 2, _new_wall.y + (3 * cell_height) / 2, "Level", obj_speed_spawner);
+				_new_speed_spawner.curr_face_direction = FACE_DIRECTION.BOTTOM;
+				
+				var _new_tank_spawner = instance_create_layer(_new_wall.x + cell_width / 2, _new_wall.y + (3 * cell_height) / 2, "Level", obj_tank_spawner);
+				_new_tank_spawner.curr_face_direction = FACE_DIRECTION.BOTTOM;
 				
 				// Increases the gap count
 				gap_count++;
