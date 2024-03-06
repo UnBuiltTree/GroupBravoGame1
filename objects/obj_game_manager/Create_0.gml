@@ -319,13 +319,13 @@ var _flower_edge_offset = 240;
 var _flower_count = round(arena_grid_width * arena_grid_height * _flower_rate);
 	
 // Loop for creation of flowers 
-for (var _i = 0; _i < _flower_count; _i++)
+/*for (var _i = 0; _i < _flower_count; _i++)
 {
 	// Creates new flower at random location within the bounds of the level and offset
 	var _new_flower_x = random_range(_flower_edge_offset, (cell_width * arena_grid_width) - _flower_edge_offset);
 	var _new_flower_y = random_range(_flower_edge_offset, (cell_height * arena_grid_height) - _flower_edge_offset);
 	instance_create_layer(_new_flower_x, _new_flower_y, "Flowers", obj_flower);
-}
+}*/
 
 // Creates a player within the centre of the room and sets their ID to 0 (player 1) facing them down
 var _player = instance_create_layer((arena_grid_width * cell_width) / 2, (arena_grid_height * cell_height) / 2,"Instances", obj_player);
