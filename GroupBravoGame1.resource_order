@@ -1,4 +1,14 @@
 {
+<<<<<<< HEAD
+  "FolderOrderSettings": [],
+  "ResourceOrderSettings": [
+    {"name":"tanker","order":2,"path":"sprites/tanker/tanker.yy",},
+    {"name":"speedy_obj","order":1,"path":"objects/speedy_obj/speedy_obj.yy",},
+    {"name":"tanky_obj","order":2,"path":"objects/tanky_obj/tanky_obj.yy",},
+    {"name":"obj_tank_spawner","order":2,"path":"objects/obj_tank_spawner/obj_tank_spawner.yy",},
+    {"name":"speedy","order":1,"path":"sprites/speedy/speedy.yy",},
+    {"name":"obj_speed_spawner","order":1,"path":"objects/obj_speed_spawner/obj_speed_spawner.yy",},
+=======
   "FolderOrderSettings": [
     {"name":"Animation Curves","order":6,"path":"folders/Animation Curves.yy",},
     {"name":"Extensions","order":7,"path":"folders/Extensions.yy",},
@@ -40,5 +50,6 @@
     {"name":"seq_interim_menu","order":2,"path":"sequences/seq_interim_menu/seq_interim_menu.yy",},
     {"name":"spr_Tank_Base_Menu","order":1,"path":"sprites/spr_Tank_Base_Menu/spr_Tank_Base_Menu.yy",},
     {"name":"spr_player_shield","order":4,"path":"sprites/spr_player_shield/spr_player_shield.yy",},
+>>>>>>> e2572a54c3b15849cd6a522d15828c16fecf0b83
   ],
 }
